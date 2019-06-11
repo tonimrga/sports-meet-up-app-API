@@ -11,13 +11,16 @@ module.exports = (app) => {
     var event = new Event({
       title: req.body.title,
       text: req.body.text,
+      gender: req.body.gender,
       country: req.body.country,
       subcountry: req.body.subcountry,
       city: req.body.city,
       datetime: req.body.datetime,
       peopleNum: req.body.peopleNum,
       playground: req.body.playground,
-      sport: req.body.sport,
+      gameType: req.body.gameType,
+      level: req.body.level,
+      sport: 0,
       _creator: req.user._id
     });
 
@@ -92,7 +95,7 @@ module.exports = (app) => {
   //ruta za update evenata
   app.patch('/events/:id', authenticate, (req, res) => {
     var id = req.params.id;
-    var body = _.pick(req.body, ['title', 'text', 'city', 'country', 'subcountry', 'date', 'time', 'playground', 'peopleNum', 'sport']);
+    var body = _.pick(req.body, ['title', 'text', 'city', 'gender', 'level', 'gameType', 'country', 'subcountry', 'date', 'time', 'playground', 'peopleNum', 'sport']);
 
     if (!ObjectID.isValid(id)) {
       return res.status(404).send();

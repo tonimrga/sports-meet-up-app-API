@@ -17,6 +17,12 @@ var Event = mongoose.model('Event', {
     minlength: 1,
     trim: true
   },
+  gender: {
+    type: String,
+    required: true,
+    minlength: 1,
+    trim: true
+  },
   country: {
     type: String,
     required: true,
@@ -46,6 +52,16 @@ var Event = mongoose.model('Event', {
     required: true
   },
   sport: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  level: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  gameType: {
     type: String,
     required: true,
     trim: true

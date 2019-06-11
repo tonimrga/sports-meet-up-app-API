@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 //spajanje na bazu
-mongoose.connect(process.env.DB_URL , {useNewUrlParser: true} );
+mongoose.connect('mongodb://toni:toni6788@ds263656.mlab.com:63656/sportiranje' , {useNewUrlParser: true} );
 
 //export modula
 module.exports = {mongoose};

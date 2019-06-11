@@ -2,29 +2,5 @@
   {
     "id": "0",
     "name": "Soccer"
-  },
-  {
-    "id": "1",
-    "name": "Basketball"
-  },
-  {
-    "id": "2",
-    "name": "Tennis"
-  },
-  {
-    "id": "3",
-    "name": "Baseball/softball"
-  },
-  {
-    "id": "4",
-    "name": "Cycling"
-  },
-  {
-    "id": "5",
-    "name": "Combat sports"
-  },
-  {
-    "id": "6",
-    "name": "Running"
   }
 ]

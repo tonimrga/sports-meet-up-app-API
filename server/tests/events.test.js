@@ -9,12 +9,15 @@ var body = {
   "title": "Košarka na vojnom",
   "text": "Pozdrav ljudi meni se igra košarka",
   "city": "Rijeka",
+  "gender": "Male",
   "country": "Croatia",
   "subcountry": "Primorska",
+  "level": "High",
+  "gameType": "5vs5",
   "datetime": "14141",
   "playground": "Vojno igralište",
   "peopleNum": 10,
-  "sport": "2"
+  "sport": "0"
 }
 
 var toniToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Y2Y4ZWE5ODZlZDA2YTEyMjc0OTlmNDkiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTU5ODE2ODU2fQ.--k8jlLccirC4QVoWch8KI2UrdSk6o7CBdcOPaKDT3w';
@@ -33,6 +36,9 @@ describe('POST /events', () => {
         expect(res.body.city).toBe(body.city);
         expect(res.body.country).toBe(body.country);
         expect(res.body.subcountry).toBe(body.subcountry);
+        expect(res.body.level).toBe(body.level);
+        expect(res.body.gender).toBe(body.gender);
+        expect(res.body.gameType).toBe(body.gameType);
         expect(res.body.playground).toBe(body.playground);
         expect(res.body.peopleNum).toBe(body.peopleNum);
         expect(res.body.sport).toBe(body.sport);
@@ -102,6 +108,9 @@ describe('GET /events/:id', () => {
         expect(res.body.event.title).toBe(body.title);
         expect(res.body.event.text).toBe(body.text);
         expect(res.body.event.city).toBe(body.city);
+        expect(res.body.event.level).toBe(body.level);
+        expect(res.body.event.gender).toBe(body.gender);
+        expect(res.body.event.gameType).toBe(body.gameType);
         expect(res.body.event.country).toBe(body.country);
         expect(res.body.event.subcountry).toBe(body.subcountry);
         expect(res.body.event.playground).toBe(body.playground);
