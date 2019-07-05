@@ -61,11 +61,6 @@ var Event = mongoose.model('Event', {
     required: true,
     trim: true
   },
-  gameType: {
-    type: String,
-    required: true,
-    trim: true
-  },
   _creator: {
     type: mongoose.Schema.Types.ObjectId,
     required: true
